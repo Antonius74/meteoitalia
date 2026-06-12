@@ -37,6 +37,12 @@ export interface HourlyForecast {
   visibility: number;
 }
 
+export interface DailyHourly {
+  date: string;
+  dayOfWeek: string;
+  hours: HourlyForecast[];
+}
+
 export interface City {
   name: string;
   displayName: string;
@@ -52,12 +58,6 @@ export interface WeatherData {
   hourly: HourlyForecast[];
   city: City;
   lastUpdated: string;
-}
-
-export interface SearchResult {
-  results: City[];
-  loading: boolean;
-  error: string | null;
 }
 
 export type WeatherCondition = 
@@ -76,4 +76,19 @@ export interface ThemeColors {
   text: string;
   accent: string;
   border: string;
+}
+
+export interface MapCity {
+  name: string;
+  displayName: string;
+  region?: string;
+  lat: number;
+  lon: number;
+  temperature?: number;
+  condition?: string;
+  windSpeed?: number;
+  windDirection?: number;
+  pressure?: number;
+  humidity?: number;
+  precipitation?: number;
 }

@@ -10,7 +10,6 @@ interface CurrentWeatherProps {
 
 export default function CurrentWeather({ weather }: CurrentWeatherProps) {
   const { current, city } = weather;
-  const condition = getWeatherCondition(current.weatherCode);
   const description = getWeatherDescription(current.weatherCode);
   const theme = getThemeByWeather(current.weatherCode, current.isDay);
 
@@ -109,7 +108,9 @@ export default function CurrentWeather({ weather }: CurrentWeatherProps) {
 function DetailItem({ icon, label, value }: { icon: React.ReactNode; label: string; value: string }) {
   return (
     <div className="flex items-center gap-3">
-      <div className="text-white/70">{icon}</div>
+      <div className="text-white/70" aria-hidden="true">
+        {icon}
+      </div>
       <div>
         <p className="text-xs text-white/60">{label}</p>
         <p className="text-sm font-semibold">{value}</p>

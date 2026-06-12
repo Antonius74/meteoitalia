@@ -62,7 +62,7 @@ export default function RadarPage() {
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
               I dati radar mostrano le precipitazioni in tempo reale sulla mappa.
-              I colori indicano l'intensità: dal blu (pioggerella) al viola/rosso (temporali forti).
+              I colori indicano l&apos;intensità: dal blu (pioggerella) al viola/rosso (temporali forti).
             </p>
           </div>
 

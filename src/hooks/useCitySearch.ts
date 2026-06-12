@@ -23,26 +23,29 @@ export function useCitySearch() {
     setLoading(true);
     setError(null);
 
-    timeoutRef.current = setTimeout(async () => {
-      try {
-        const cities = await weatherService.searchCities(query);
-        setResults(cities);
-      } catch (err) {
-        setError('Errore nella ricerca');
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
+    timeoutRef.current = setTimeout(() => {
+      void (async () => {
+        try {
+          const cities = await weatherService.searchCities(query);
+          setResults(cities);
+        } catch (err: unknown) {
+          setError('Errore nella ricerca');
+          console.error(err);
+        } finally {
+          setLoading(false);
+        }
+      })();
     }, 300);
   }, []);
 
-  const clear = () => {
+  const clear = useCallback(() => {
     setResults([]);
     setError(null);
+    setLoading(false);
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
     }
-  };
+  }, []);
 
   return { results, loading, error, search, clear };
 }

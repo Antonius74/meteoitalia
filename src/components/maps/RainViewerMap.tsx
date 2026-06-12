@@ -50,10 +50,9 @@ export default function RainViewerMap() {
       
       if (!latest) throw new Error('Nessun timestamp disponibile');
       setTimestamp(latest);
-    } catch (err) {
+    } catch (err: unknown) {
       console.error('RainViewer API error:', err);
       setError('Impossibile caricare i dati radar da RainViewer');
-      // Fallback: usa timestamp approssimativo recente
       const fallbackTs = Math.floor(Date.now() / 1000 / 600) * 600;
       setTimestamp(fallbackTs);
     } finally {
@@ -62,7 +61,8 @@ export default function RainViewerMap() {
   };
 
   useEffect(() => {
-    fetchLatestTimestamp();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    void fetchLatestTimestamp();
   }, []);
 
   if (loading) {
@@ -90,6 +90,7 @@ export default function RainViewerMap() {
           <div className="flex gap-3 justify-center">
             <button
               onClick={fetchLatestTimestamp}
+              aria-label="Riprova caricamento radar"
               className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <RotateCcw className="w-4 h-4" />

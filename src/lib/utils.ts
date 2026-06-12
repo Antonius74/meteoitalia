@@ -1,8 +1,21 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { type ClassValue, clsx } from 'clsx';
+import { twMerge } from 'tailwind-merge';
+import { ThemeColors } from '@/types/weather';
+import { WEATHER_CODES } from './weatherCodes';
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
+}
+
+export function slugify(input: string): string {
+  return input
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
 }
 
 export function formatTemperature(temp: number): string {
@@ -41,47 +54,11 @@ export function getHourFromIso(isoString: string): string {
 }
 
 export function getWeatherCondition(code: number): string {
-  // WMO Weather interpretation codes
-  if (code === 0) return 'clear';
-  if (code >= 1 && code <= 3) return 'partly-cloudy';
-  if (code >= 45 && code <= 48) return 'fog';
-  if (code >= 51 && code <= 57) return 'drizzle';
-  if (code >= 61 && code <= 67) return 'rain';
-  if (code >= 71 && code <= 77) return 'snow';
-  if (code >= 80 && code <= 82) return 'rain';
-  if (code >= 85 && code <= 86) return 'snow';
-  if (code >= 95) return 'thunderstorm';
-  return 'cloudy';
+  return WEATHER_CODES[code]?.condition ?? 'cloudy';
 }
 
 export function getWeatherDescription(code: number): string {
-  const descriptions: Record<number, string> = {
-    0: 'Cielo sereno',
-    1: 'Prevalentemente sereno',
-    2: 'Parzialmente nuvoloso',
-    3: 'Nuvoloso',
-    45: 'Nebbia',
-    48: 'Nebbia con brina',
-    51: 'Pioggerella leggera',
-    53: 'Pioggerella moderata',
-    55: 'Pioggerella intensa',
-    61: 'Pioggia leggera',
-    63: 'Pioggia moderata',
-    65: 'Pioggia intensa',
-    71: 'Nevicate leggere',
-    73: 'Nevicate moderate',
-    75: 'Nevicate intense',
-    77: 'Granelli di neve',
-    80: 'Rovesci leggeri',
-    81: 'Rovesci moderati',
-    82: 'Rovesci intensi',
-    85: 'Nevicate leggere',
-    86: 'Nevicate intense',
-    95: 'Temporale',
-    96: 'Temporale con grandine',
-    99: 'Temporale con grandine',
-  };
-  return descriptions[code] || 'Nuvoloso';
+  return WEATHER_CODES[code]?.description ?? 'Nuvoloso';
 }
 
 export function getThemeByWeather(code: number, isDay: boolean): ThemeColors {
@@ -158,5 +135,3 @@ export function getThemeByWeather(code: number, isDay: boolean): ThemeColors {
 
   return themes[condition] || themes.clear;
 }
-
-import { ThemeColors } from '@/types/weather';

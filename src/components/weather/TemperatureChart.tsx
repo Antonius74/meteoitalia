@@ -28,8 +28,8 @@ export default function TemperatureChart({ hourly }: TemperatureChartProps) {
         Andamento Temperature
       </h2>
       
-      <div className="h-[300px]">
-        <ResponsiveContainer width="100%" height="100%">
+      <div className="h-[300px] w-full min-w-0">
+        <ResponsiveContainer width="100%" height="100%" debounce={50}>
           <AreaChart data={data}>
             <defs>
               <linearGradient id="tempGradient" x1="0" y1="0" x2="0" y2="1">
@@ -57,7 +57,7 @@ export default function TemperatureChart({ hourly }: TemperatureChartProps) {
                 borderRadius: '12px',
                 color: '#fff',
               }}
-              formatter={(value: any) => [`${value}°C`, 'Temperatura']}
+              formatter={(value) => [`${String(value)}°C`, 'Temperatura']}
             />
             <Area
               type="monotone"
