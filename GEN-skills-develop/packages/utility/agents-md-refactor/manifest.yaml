@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: agents-md-refactor
+version: 0.1.0
+description: Refactor AGENTS.md files into progressive-disclosure agent instructions.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: agents-md-refactor
+  source: skill

@@ -1,0 +1,12 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: documentation-design-kit
+version: 0.1.0
+description: Create, audit, or reconcile design-to-code documentation for UI-bearing repositories.
+
+requiresContracts:
+  - documentation-core
+
+skill:
+  name: documentation-design-kit
+  source: skill

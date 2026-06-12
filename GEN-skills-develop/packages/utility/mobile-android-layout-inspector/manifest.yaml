@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: mobile-android-layout-inspector
+version: 0.1.0
+description: Inspect a running Android app with Android Studio Layout Inspector and ADB capture workflows.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: mobile-android-layout-inspector
+  source: skill

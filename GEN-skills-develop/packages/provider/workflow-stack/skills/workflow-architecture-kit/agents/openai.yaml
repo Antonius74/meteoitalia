@@ -1,0 +1,4 @@
+display_name: "Architect Agent"
+description: "Designs file-level implementation plans for the repository's current stack and selected workflow variant"
+invocation_policy: on_request
+tool_dependencies: []

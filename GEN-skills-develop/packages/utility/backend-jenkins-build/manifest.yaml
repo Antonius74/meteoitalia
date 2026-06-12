@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: backend-jenkins-build
+version: 0.1.0
+description: Trigger, verify, and monitor backend Jenkins builds from repository-local Jenkins documentation.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: backend-jenkins-build
+  source: skill

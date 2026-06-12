@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gen-skills.local/workflow-core/api-contract-artifact.schema.json",
+  "title": "API Contract Handoff Artifact Contract",
+  "schema_kind": "workflow-artifact-contract",
+  "artifact": "api_contract",
+  "template_path": "templates/skills/shared/api-contract-template.md",
+  "required_markdown_sections": [
+    "## Summary",
+    "## Contract Sources",
+    "## Operations",
+    "## Payload Schemas",
+    "## Status And Error Mapping",
+    "## Compatibility And Versioning",
+    "## Consumer Implementation Notes",
+    "## Open Questions And Risks",
+    "## Traceability Matrix"
+  ],
+  "required_tokens": [
+    "No API-impacting changes identified",
+    "Awaiting Gate 2 approval",
+    "**Gate 2 decision:**"
+  ],
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "summary",
+    "operations",
+    "payload_schemas",
+    "status_error_mapping",
+    "traceability_matrix"
+  ],
+  "properties": {
+    "summary": { "type": "object" },
+    "operations": { "type": "array" },
+    "payload_schemas": { "type": "array" },
+    "status_error_mapping": { "type": "array" },
+    "traceability_matrix": { "type": "array" }
+  }
+}

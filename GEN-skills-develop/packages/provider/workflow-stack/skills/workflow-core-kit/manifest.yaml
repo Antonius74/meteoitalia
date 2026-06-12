@@ -1,0 +1,505 @@
+version: 1
+library: workflow-core
+description: Shared delivery workflow templates with backend, frontend, mobile-android, and mobile-ios overlays.
+
+references:
+  - id: api-producer-contract
+    kind: workflow-reference
+    scope: shared
+    path: references/api-producer-contract.md
+  - id: api-consumer-contract
+    kind: workflow-reference
+    scope: shared
+    path: references/api-consumer-contract.md
+
+schemas:
+  - id: requirements-artifact
+    kind: artifact-schema
+    artifact: requirements
+    path: schemas/requirements-artifact.schema.json
+  - id: implementation-plan-artifact
+    kind: artifact-schema
+    artifact: implementation_plan
+    path: schemas/implementation-plan-artifact.schema.json
+  - id: api-contract-artifact
+    kind: artifact-schema
+    artifact: api_contract
+    path: schemas/api-contract-artifact.schema.json
+  - id: test-cases-artifact
+    kind: artifact-schema
+    artifact: test_cases
+    path: schemas/test-cases-artifact.schema.json
+  - id: workflow-state-artifact
+    kind: artifact-schema
+    artifact: workflow_state
+    path: schemas/workflow-state-artifact.schema.json
+  - id: backend-architecture
+    kind: template-schema
+    scope: backend
+    phase: architecture
+    path: schemas/backend-architecture.schema.json
+  - id: backend-development
+    kind: template-schema
+    scope: backend
+    phase: development
+    path: schemas/backend-development.schema.json
+  - id: backend-orchestration
+    kind: template-schema
+    scope: backend
+    phase: orchestration
+    path: schemas/backend-orchestration.schema.json
+  - id: backend-planning
+    kind: template-schema
+    scope: backend
+    phase: planning
+    path: schemas/backend-planning.schema.json
+  - id: backend-test-design
+    kind: template-schema
+    scope: backend
+    phase: test-design
+    path: schemas/backend-test-design.schema.json
+  - id: frontend-api-integration
+    kind: template-schema
+    scope: frontend
+    phase: api-integration
+    path: schemas/frontend-api-integration.schema.json
+  - id: frontend-architecture
+    kind: template-schema
+    scope: frontend
+    phase: architecture
+    path: schemas/frontend-architecture.schema.json
+  - id: frontend-development
+    kind: template-schema
+    scope: frontend
+    phase: development
+    path: schemas/frontend-development.schema.json
+  - id: frontend-orchestration
+    kind: template-schema
+    scope: frontend
+    phase: orchestration
+    path: schemas/frontend-orchestration.schema.json
+  - id: frontend-planning
+    kind: template-schema
+    scope: frontend
+    phase: planning
+    path: schemas/frontend-planning.schema.json
+  - id: frontend-test-design
+    kind: template-schema
+    scope: frontend
+    phase: test-design
+    path: schemas/frontend-test-design.schema.json
+  - id: frontend-ui-feature-implementation
+    kind: template-schema
+    scope: frontend
+    phase: ui-feature-implementation
+    path: schemas/frontend-ui-feature-implementation.schema.json
+  - id: mobile-android-architecture
+    kind: template-schema
+    scope: mobile-android
+    phase: architecture
+    path: schemas/mobile-android-architecture.schema.json
+  - id: mobile-android-client-service-implementation
+    kind: template-schema
+    scope: mobile-android
+    phase: client-service-implementation
+    path: schemas/mobile-android-client-service-implementation.schema.json
+  - id: mobile-android-development
+    kind: template-schema
+    scope: mobile-android
+    phase: development
+    path: schemas/mobile-android-development.schema.json
+  - id: mobile-android-orchestration
+    kind: template-schema
+    scope: mobile-android
+    phase: orchestration
+    path: schemas/mobile-android-orchestration.schema.json
+  - id: mobile-android-planning
+    kind: template-schema
+    scope: mobile-android
+    phase: planning
+    path: schemas/mobile-android-planning.schema.json
+  - id: mobile-android-screen-flow-implementation
+    kind: template-schema
+    scope: mobile-android
+    phase: screen-flow-implementation
+    path: schemas/mobile-android-screen-flow-implementation.schema.json
+  - id: mobile-android-test-design
+    kind: template-schema
+    scope: mobile-android
+    phase: test-design
+    path: schemas/mobile-android-test-design.schema.json
+  - id: mobile-ios-architecture
+    kind: template-schema
+    scope: mobile-ios
+    phase: architecture
+    path: schemas/mobile-ios-architecture.schema.json
+  - id: mobile-ios-client-service-implementation
+    kind: template-schema
+    scope: mobile-ios
+    phase: client-service-implementation
+    path: schemas/mobile-ios-client-service-implementation.schema.json
+  - id: mobile-ios-development
+    kind: template-schema
+    scope: mobile-ios
+    phase: development
+    path: schemas/mobile-ios-development.schema.json
+  - id: mobile-ios-orchestration
+    kind: template-schema
+    scope: mobile-ios
+    phase: orchestration
+    path: schemas/mobile-ios-orchestration.schema.json
+  - id: mobile-ios-planning
+    kind: template-schema
+    scope: mobile-ios
+    phase: planning
+    path: schemas/mobile-ios-planning.schema.json
+  - id: mobile-ios-screen-flow-implementation
+    kind: template-schema
+    scope: mobile-ios
+    phase: screen-flow-implementation
+    path: schemas/mobile-ios-screen-flow-implementation.schema.json
+  - id: mobile-ios-test-design
+    kind: template-schema
+    scope: mobile-ios
+    phase: test-design
+    path: schemas/mobile-ios-test-design.schema.json
+  - id: shared-architecture
+    kind: template-schema
+    scope: shared
+    phase: architecture
+    path: schemas/shared-architecture.schema.json
+  - id: shared-development
+    kind: template-schema
+    scope: shared
+    phase: development
+    path: schemas/shared-development.schema.json
+  - id: shared-orchestration
+    kind: template-schema
+    scope: shared
+    phase: orchestration
+    path: schemas/shared-orchestration.schema.json
+  - id: shared-planning
+    kind: template-schema
+    scope: shared
+    phase: planning
+    path: schemas/shared-planning.schema.json
+  - id: shared-test-design
+    kind: template-schema
+    scope: shared
+    phase: test-design
+    path: schemas/shared-test-design.schema.json
+
+templates:
+  - id: planning-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/planning.template.md
+  - id: architecture-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/architecture.template.md
+  - id: development-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/development.template.md
+  - id: test-design-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/test-design.template.md
+  - id: orchestration-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/orchestration.template.md
+  - id: unit-testing-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/unit-testing.template.md
+  - id: automation-test-writing-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/automation-test-writing.template.md
+  - id: automation-test-running-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/automation-test-running.template.md
+  - id: requirements-output-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/requirements-template.md
+  - id: implementation-plan-output-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/implementation-plan-template.md
+  - id: api-contract-output-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/api-contract-template.md
+  - id: test-cases-output-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/test-cases-template.md
+  - id: workflow-state-output-shared
+    kind: skill-template
+    scope: shared
+    path: templates/skills/shared/workflow-state-template.yml
+
+  - id: planning-backend
+    kind: skill-template
+    scope: backend
+    path: templates/skills/backend/planning.template.md
+  - id: architecture-backend
+    kind: skill-template
+    scope: backend
+    path: templates/skills/backend/architecture.template.md
+  - id: development-backend
+    kind: skill-template
+    scope: backend
+    path: templates/skills/backend/development.template.md
+  - id: test-design-backend
+    kind: skill-template
+    scope: backend
+    path: templates/skills/backend/test-design.template.md
+  - id: orchestration-backend
+    kind: skill-template
+    scope: backend
+    path: templates/skills/backend/orchestration.template.md
+
+  - id: planning-frontend
+    kind: skill-template
+    scope: frontend
+    path: templates/skills/frontend/planning.template.md
+  - id: architecture-frontend
+    kind: skill-template
+    scope: frontend
+    path: templates/skills/frontend/architecture.template.md
+  - id: development-frontend
+    kind: skill-template
+    scope: frontend
+    path: templates/skills/frontend/development.template.md
+  - id: test-design-frontend
+    kind: skill-template
+    scope: frontend
+    path: templates/skills/frontend/test-design.template.md
+  - id: test-cases-output-frontend
+    kind: skill-template
+    scope: frontend
+    path: templates/skills/frontend/test-cases-template.md
+  - id: orchestration-frontend
+    kind: skill-template
+    scope: frontend
+    path: templates/skills/frontend/orchestration.template.md
+
+  - id: ui-feature-implementation-frontend
+    kind: skill-template
+    scope: frontend
+    path: templates/skills/frontend/ui-feature-implementation.template.md
+  - id: api-integration-frontend
+    kind: skill-template
+    scope: frontend
+    path: templates/skills/frontend/api-integration.template.md
+  - id: planning-mobile-android
+    kind: skill-template
+    scope: mobile-android
+    path: templates/skills/mobile-android/planning.template.md
+  - id: architecture-mobile-android
+    kind: skill-template
+    scope: mobile-android
+    path: templates/skills/mobile-android/architecture.template.md
+  - id: development-mobile-android
+    kind: skill-template
+    scope: mobile-android
+    path: templates/skills/mobile-android/development.template.md
+  - id: test-design-mobile-android
+    kind: skill-template
+    scope: mobile-android
+    path: templates/skills/mobile-android/test-design.template.md
+  - id: orchestration-mobile-android
+    kind: skill-template
+    scope: mobile-android
+    path: templates/skills/mobile-android/orchestration.template.md
+  - id: screen-flow-implementation-mobile-android
+    kind: skill-template
+    scope: mobile-android
+    path: templates/skills/mobile-android/screen-flow-implementation.template.md
+  - id: client-service-implementation-mobile-android
+    kind: skill-template
+    scope: mobile-android
+    path: templates/skills/mobile-android/client-service-implementation.template.md
+  - id: planning-mobile-ios
+    kind: skill-template
+    scope: mobile-ios
+    path: templates/skills/mobile-ios/planning.template.md
+  - id: architecture-mobile-ios
+    kind: skill-template
+    scope: mobile-ios
+    path: templates/skills/mobile-ios/architecture.template.md
+  - id: development-mobile-ios
+    kind: skill-template
+    scope: mobile-ios
+    path: templates/skills/mobile-ios/development.template.md
+  - id: test-design-mobile-ios
+    kind: skill-template
+    scope: mobile-ios
+    path: templates/skills/mobile-ios/test-design.template.md
+  - id: orchestration-mobile-ios
+    kind: skill-template
+    scope: mobile-ios
+    path: templates/skills/mobile-ios/orchestration.template.md
+  - id: screen-flow-implementation-mobile-ios
+    kind: skill-template
+    scope: mobile-ios
+    path: templates/skills/mobile-ios/screen-flow-implementation.template.md
+  - id: client-service-implementation-mobile-ios
+    kind: skill-template
+    scope: mobile-ios
+    path: templates/skills/mobile-ios/client-service-implementation.template.md
+  - id: planner-agent-shared
+    kind: agent-template
+    scope: shared
+    path: templates/agents/shared/planner.template.toml
+  - id: architect-agent-shared
+    kind: agent-template
+    scope: shared
+    path: templates/agents/shared/architect.template.toml
+  - id: developer-agent-shared
+    kind: agent-template
+    scope: shared
+    path: templates/agents/shared/developer.template.toml
+  - id: test-designer-agent-shared
+    kind: agent-template
+    scope: shared
+    path: templates/agents/shared/test-designer.template.toml
+  - id: unit-tester-agent-shared
+    kind: agent-template
+    scope: shared
+    path: templates/agents/shared/unit-tester.template.toml
+  - id: automation-test-writer-agent-shared
+    kind: agent-template
+    scope: shared
+    path: templates/agents/shared/automation-test-writer.template.toml
+  - id: automation-test-runner-agent-shared
+    kind: agent-template
+    scope: shared
+    path: templates/agents/shared/automation-test-runner.template.toml
+
+  - id: planner-agent-backend
+    kind: agent-template
+    scope: backend
+    path: templates/agents/backend/planner.template.toml
+  - id: architect-agent-backend
+    kind: agent-template
+    scope: backend
+    path: templates/agents/backend/architect.template.toml
+  - id: developer-agent-backend
+    kind: agent-template
+    scope: backend
+    path: templates/agents/backend/developer.template.toml
+  - id: test-designer-agent-backend
+    kind: agent-template
+    scope: backend
+    path: templates/agents/backend/test-designer.template.toml
+  - id: unit-tester-agent-backend
+    kind: agent-template
+    scope: backend
+    path: templates/agents/backend/unit-tester.template.toml
+  - id: automation-test-writer-agent-backend
+    kind: agent-template
+    scope: backend
+    path: templates/agents/backend/automation-test-writer.template.toml
+  - id: automation-test-runner-agent-backend
+    kind: agent-template
+    scope: backend
+    path: templates/agents/backend/automation-test-runner.template.toml
+
+  - id: planner-agent-frontend
+    kind: agent-template
+    scope: frontend
+    path: templates/agents/frontend/planner.template.toml
+  - id: architect-agent-frontend
+    kind: agent-template
+    scope: frontend
+    path: templates/agents/frontend/architect.template.toml
+  - id: developer-agent-frontend
+    kind: agent-template
+    scope: frontend
+    path: templates/agents/frontend/developer.template.toml
+  - id: test-designer-agent-frontend
+    kind: agent-template
+    scope: frontend
+    path: templates/agents/frontend/test-designer.template.toml
+  - id: unit-tester-agent-frontend
+    kind: agent-template
+    scope: frontend
+    path: templates/agents/frontend/unit-tester.template.toml
+  - id: automation-test-writer-agent-frontend
+    kind: agent-template
+    scope: frontend
+    path: templates/agents/frontend/automation-test-writer.template.toml
+  - id: automation-test-runner-agent-frontend
+    kind: agent-template
+    scope: frontend
+    path: templates/agents/frontend/automation-test-runner.template.toml
+
+  - id: planner-agent-mobile-android
+    kind: agent-template
+    scope: mobile-android
+    path: templates/agents/mobile-android/planner.template.toml
+  - id: architect-agent-mobile-android
+    kind: agent-template
+    scope: mobile-android
+    path: templates/agents/mobile-android/architect.template.toml
+  - id: developer-agent-mobile-android
+    kind: agent-template
+    scope: mobile-android
+    path: templates/agents/mobile-android/developer.template.toml
+  - id: test-designer-agent-mobile-android
+    kind: agent-template
+    scope: mobile-android
+    path: templates/agents/mobile-android/test-designer.template.toml
+  - id: unit-tester-agent-mobile-android
+    kind: agent-template
+    scope: mobile-android
+    path: templates/agents/mobile-android/unit-tester.template.toml
+  - id: automation-test-writer-agent-mobile-android
+    kind: agent-template
+    scope: mobile-android
+    path: templates/agents/mobile-android/automation-test-writer.template.toml
+  - id: automation-test-runner-agent-mobile-android
+    kind: agent-template
+    scope: mobile-android
+    path: templates/agents/mobile-android/automation-test-runner.template.toml
+  - id: planner-agent-mobile-ios
+    kind: agent-template
+    scope: mobile-ios
+    path: templates/agents/mobile-ios/planner.template.toml
+  - id: architect-agent-mobile-ios
+    kind: agent-template
+    scope: mobile-ios
+    path: templates/agents/mobile-ios/architect.template.toml
+  - id: developer-agent-mobile-ios
+    kind: agent-template
+    scope: mobile-ios
+    path: templates/agents/mobile-ios/developer.template.toml
+  - id: test-designer-agent-mobile-ios
+    kind: agent-template
+    scope: mobile-ios
+    path: templates/agents/mobile-ios/test-designer.template.toml
+  - id: unit-tester-agent-mobile-ios
+    kind: agent-template
+    scope: mobile-ios
+    path: templates/agents/mobile-ios/unit-tester.template.toml
+  - id: automation-test-writer-agent-mobile-ios
+    kind: agent-template
+    scope: mobile-ios
+    path: templates/agents/mobile-ios/automation-test-writer.template.toml
+  - id: automation-test-runner-agent-mobile-ios
+    kind: agent-template
+    scope: mobile-ios
+    path: templates/agents/mobile-ios/automation-test-runner.template.toml
+
+examples:
+  - id: portal-be-codex-mapping
+    path: examples/portal-be-codex-mapping.md
+
+validation:
+  path: scripts/validate.sh

@@ -1,0 +1,12 @@
+name = "automation-test-writer"
+description = "Writes executable automated TC-E2E flows and preserves TC-M manual or blocked handoff items."
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Load the automation-test-writing phase contract from templates/skills/shared/automation-test-writing.template.md.
+Generate automation files and automation-test-data.md from approved test cases.
+Implement only TC-E2E cases marked fully_automated and ready. Preserve TC-M manual and blocked cases as handoff/reporting items, and keep environment values parameterized.
+Write artifacts.automation_test_data with commands, data, environment requirements, TC-M manual handoff entries, blocked flows, and substitute evidence.
+Emit one [PROGRESS] message after each major automation-authoring step and one [DONE] message only after automation files and automation-test-data.md are complete or blockers are recorded.
+"""

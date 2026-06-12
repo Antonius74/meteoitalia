@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gen-skills.local/workflow-core/requirements-artifact.schema.json",
+  "title": "Requirements Artifact Contract",
+  "schema_kind": "workflow-artifact-contract",
+  "artifact": "requirements",
+  "template_path": "templates/skills/shared/requirements-template.md",
+  "required_markdown_sections": [
+    "## Source Jira Issues",
+    "## Functional Requirements",
+    "## Non-Functional Requirements",
+    "## Assumptions",
+    "## Open Questions",
+    "## Traceability Matrix"
+  ],
+  "required_tokens": [
+    "**User Inputs:**",
+    "**Validations:**",
+    "**Displayed Data:**",
+    "**User Flow / Next Steps:**",
+    "Not specified — flagged in Open Questions"
+  ],
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "source_issues",
+    "functional_requirements",
+    "traceability_matrix"
+  ],
+  "properties": {
+    "source_issues": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "functional_requirements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "source",
+          "description",
+          "acceptance_criteria",
+          "user_inputs",
+          "validations",
+          "displayed_data",
+          "user_flow_next_steps"
+        ]
+      },
+      "minItems": 1
+    },
+    "traceability_matrix": { "type": "array" }
+  }
+}

@@ -1,0 +1,59 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: provider
+name: superpowers
+version: 0.1.0
+
+capabilities:
+  requirements-design:
+    skill: brainstorming
+  planning:
+    skill: writing-plans
+  execution:
+    skill: executing-plans
+  tdd:
+    skill: test-driven-development
+  debugging:
+    skill: systematic-debugging
+  verification:
+    skill: verification-before-completion
+  code-review:
+    skills:
+      - requesting-code-review
+      - receiving-code-review
+  finishing:
+    skill: finishing-a-development-branch
+
+skills:
+  - name: brainstorming
+    role: workflow
+    source: skills/brainstorming
+  - name: executing-plans
+    role: workflow
+    source: skills/executing-plans
+  - name: finishing-a-development-branch
+    role: workflow
+    source: skills/finishing-a-development-branch
+  - name: receiving-code-review
+    role: workflow
+    source: skills/receiving-code-review
+  - name: requesting-code-review
+    role: workflow
+    source: skills/requesting-code-review
+  - name: subagent-driven-development
+    role: workflow
+    source: skills/subagent-driven-development
+  - name: systematic-debugging
+    role: workflow
+    source: skills/systematic-debugging
+  - name: test-driven-development
+    role: workflow
+    source: skills/test-driven-development
+  - name: using-git-worktrees
+    role: workflow
+    source: skills/using-git-worktrees
+  - name: verification-before-completion
+    role: workflow
+    source: skills/verification-before-completion
+  - name: writing-plans
+    role: workflow
+    source: skills/writing-plans

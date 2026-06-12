@@ -1,0 +1,42 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: variant
+name: backend-java
+version: 0.1.0
+
+requiresProviderCapabilities:
+  - requirements-design
+  - planning
+  - execution
+  - tdd
+  - debugging
+  - verification
+  - code-review
+
+requiresContracts:
+  - nexi-workflow-contracts
+
+requiresUtilities:
+  - grill-me
+  - read-jira-issue
+  - backend-service-implementation-kit
+  - backend-controller-implementation-kit
+  - backend-deployment-management
+  - backend-jenkins-build
+  - backend-jenkins-build-script
+  - backend-postman-flow-tests
+  - backend-run-collection
+
+runtime:
+  skillName: nexi-backend-java-runtime
+  source: runtime
+  references:
+    - nexi-workflow-contracts
+    - grill-me
+    - read-jira-issue
+    - backend-service-implementation-kit
+    - backend-controller-implementation-kit
+    - backend-deployment-management
+    - backend-jenkins-build
+    - backend-jenkins-build-script
+    - backend-postman-flow-tests
+    - backend-run-collection

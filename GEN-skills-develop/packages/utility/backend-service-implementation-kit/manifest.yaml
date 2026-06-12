@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: backend-service-implementation-kit
+version: 0.1.0
+description: Implement backend service-layer behavior using dedicated backend patterns.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: backend-service-implementation-kit
+  source: skill

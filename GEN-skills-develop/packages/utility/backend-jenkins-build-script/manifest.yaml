@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: backend-jenkins-build-script
+version: 0.1.0
+description: Create or maintain backend Jenkins build automation scripts from repository-local Jenkins documentation.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: backend-jenkins-build-script
+  source: skill

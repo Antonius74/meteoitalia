@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gen-skills.local/workflow-core/frontend-orchestration.schema.json",
+  "title": "Frontend Orchestration.Schema",
+  "schema_kind": "workflow-template-contract",
+  "template_path": "templates/skills/frontend/orchestration.template.md",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "template_path",
+    "scope",
+    "phase"
+  ],
+  "properties": {
+    "template_path": {
+      "const": "templates/skills/frontend/orchestration.template.md"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string"
+    },
+    "required_markdown_sections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "required_tokens": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  }
+}

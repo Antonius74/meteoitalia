@@ -1,0 +1,9 @@
+name = "automation-test-writer"
+description = "backend overlay for automation-test-writer constraints."
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared automation-test-writer template and apply backend automation scope.
+Keep test data and execution-mode reporting requirements.
+"""

@@ -1,0 +1,42 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,39181,e=>{"use strict";var t,n=e.i(43476),r=e.i(71645),i=e.i(10007),o=e.i(23177),a=e.i(24049),l=e.i(50699),s=e.i(82310),c=e.i(32322);let d=(0,l.createLayerComponent)(function({position:e,...t},n){let r=new c.Marker(e,t);return(0,a.createElementObject)(r,(0,s.extendContext)(n,{overlayContainer:r}))},function(e,t,n){t.position!==n.position&&e.setLatLng(t.position),null!=t.icon&&t.icon!==n.icon&&e.setIcon(t.icon),null!=t.zIndexOffset&&t.zIndexOffset!==n.zIndexOffset&&e.setZIndexOffset(t.zIndexOffset),null!=t.opacity&&t.opacity!==n.opacity&&e.setOpacity(t.opacity),null!=e.dragging&&t.draggable!==n.draggable&&(!0===t.draggable?e.dragging.enable():e.dragging.disable())}),p=(0,l.createOverlayComponent)(function(e,t){let n=new c.Popup(e,t.overlayContainer);return(0,a.createElementObject)(n,t)},function(e,t,{position:n},i){(0,r.useEffect)(function(){let{instance:r}=e;function o(e){e.popup===r&&(r.update(),i(!0))}function a(e){e.popup===r&&i(!1)}return t.map.on({popupopen:o,popupclose:a}),null==t.overlayContainer?(null!=n&&r.setLatLng(n),r.openOn(t.map)):t.overlayContainer.bindPopup(r),function(){t.map.off({popupopen:o,popupclose:a}),t.overlayContainer?.unbindPopup(),t.map.removeLayer(r)}},[e,t,i,n])});var u=e.i(36730),h=e.i(98959);let f=(t=(0,a.createElementHook)(function({children:e,...t},n){let r=new c.Control.Layers(void 0,void 0,t);return(0,a.createElementObject)(r,(0,s.extendContext)(n,{layersControl:r}))},function(e,t,n){t.collapsed!==n.collapsed&&(!0===t.collapsed?e.collapse():e.expand())}),function(e){let n=(0,s.useLeafletContext)(),i=t(e,n),{instance:o}=i.current,a=(0,r.useRef)(e.position),{position:l}=e;return(0,r.useEffect)(function(){return o.addTo(n.map),function(){o.remove()}},[n.map,o]),(0,r.useEffect)(function(){null!=l&&l!==a.current&&(o.setPosition(l),a.current=l)},[o,l]),i}),m=(0,h.createContainerComponent)(f);function x(e){return function(t){let n=(0,s.useLeafletContext)(),i=(0,r.useRef)(t),[o,a]=(0,r.useState)(null),{layersControl:l,map:c}=n,d=(0,r.useCallback)(t=>{null!=l&&(i.current.checked&&c.addLayer(t),e(l,t,i.current.name),a(t))},[e,l,c]),p=(0,r.useCallback)(e=>{l?.removeLayer(e),a(null)},[l]),u=(0,r.useMemo)(()=>(0,s.extendContext)(n,{layerContainer:{addLayer:d,removeLayer:p}}),[n,d,p]);return(0,r.useEffect)(()=>{null!==o&&i.current!==t&&(!0===t.checked&&(null==i.current.checked||!1===i.current.checked)?c.addLayer(o):!0===i.current.checked&&(null==t.checked||!1===t.checked)&&c.removeLayer(o),i.current=t)}),t.children?r.default.createElement(s.LeafletContext,{value:u},t.children):null}}m.BaseLayer=x(function(e,t,n){e.addBaseLayer(t,n)}),m.Overlay=x(function(e,t,n){e.addOverlay(t,n)});let g=c.default.icon({iconUrl:"/marker-icon.png",iconRetinaUrl:"/marker-icon-2x.png",shadowUrl:"/marker-shadow.png",iconSize:[25,41],iconAnchor:[12,41]});function y(){return Math.floor(6e5*Math.floor(new Date().getTime()/6e5)/1e3)}function w({center:e}){let t=(0,u.useMap)();return(0,r.useEffect)(()=>{e&&t.setView(e,t.getZoom())},[e,t]),null}c.default.Marker.prototype.options.icon=g,e.s(["default",0,function({cities:e,center:t=[41.9,12.5],zoom:a=6,activeLayer:l="temp"}){let[s,u]=(0,r.useState)(y());return(0,r.useEffect)(()=>{let e=setInterval(()=>u(y()),3e5);return()=>clearInterval(e)},[]),(0,n.jsx)("div",{className:"h-[500px] w-full overflow-hidden",children:(0,n.jsxs)(i.MapContainer,{center:t,zoom:a,scrollWheelZoom:!0,style:{height:"100%",width:"100%"},children:[(0,n.jsx)(w,{center:t}),(0,n.jsxs)(m,{position:"topright",children:[(0,n.jsx)(m.BaseLayer,{checked:"satellite"!==l,name:"Mappa",children:(0,n.jsx)(o.TileLayer,{attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',url:"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"})}),(0,n.jsx)(m.BaseLayer,{checked:"satellite"===l,name:"Satellite",children:(0,n.jsx)(o.TileLayer,{attribution:"Tiles © Esri — Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",url:"https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"})})]}),"rain"===l&&(0,n.jsx)(o.TileLayer,{attribution:'© <a href="https://www.rainviewer.com">RainViewer</a>',url:`https://tilecache.rainviewer.com/v2/radar/${s}/256/{z}/{x}/{y}/2/1_1.png`,opacity:.6},`rain-${s}`),"satellite"===l&&(0,n.jsx)(o.TileLayer,{attribution:"NASA GIBS",url:"https://gibs.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_Cloud_Top_Pressure_Day/default/{time}/GoogleMapsCompatible_Level6/{z}/{y}/{x}.png",opacity:.4}),e.map((e,t)=>(0,n.jsx)(d,{position:[e.lat,e.lon],icon:(e=>{switch(l){case"wind":let t,n,r;return t=e.windSpeed??0,n=e.windDirection??0,r=t<20?"#10B981":t<40?"#F59E0B":t<60?"#EF4444":"#7C3AED",c.default.divIcon({className:"custom-weather-marker",html:`
+      <div style="
+        display:flex;flex-direction:column;align-items:center;gap:2px;
+      ">
+        <div style="
+          width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;
+          border-bottom:16px solid ${r};transform:rotate(${n}deg);filter:drop-shadow(0 2px 2px rgba(0,0,0,0.3));
+        "></div>
+        <div style="
+          background:${r};color:white;border-radius:4px;padding:1px 4px;
+          font-size:11px;font-weight:bold;font-family:sans-serif;white-space:nowrap;
+          box-shadow:0 1px 3px rgba(0,0,0,0.3);
+        ">${Math.round(t)} km/h</div>
+      </div>
+    `,iconSize:[60,50],iconAnchor:[30,25]});case"pressure":let i;return i=e.pressure??1013,c.default.divIcon({className:"custom-weather-marker",html:`
+      <div style="
+        min-width: 48px; height: 32px; border-radius: 8px;
+        background: ${i<1e3?"#EF4444":i<1010?"#F59E0B":i<1020?"#10B981":"#3B82F6"}; border: 2px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        display: flex; align-items: center; justify-content: center;
+        font-weight: bold; color: white; font-size: 12px; font-family: sans-serif;
+        padding: 0 6px;
+      ">${Math.round(i)} hPa</div>
+    `,iconSize:[48,32],iconAnchor:[24,16]});case"rain":let o,a;return a=0===(o=e.precipitation??0)?"#9CA3AF":o<2?"#60A5FA":o<5?"#3B82F6":o<10?"#1D4ED8":"#1E3A8A",c.default.divIcon({className:"custom-weather-marker",html:`
+      <div style="
+        min-width: 40px; height: 36px; border-radius: 50%;
+        background: ${a}; border: 2px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        display: flex; align-items: center; justify-content: center;
+        font-weight: bold; color: white; font-size: 13px; font-family: sans-serif;
+        padding: 0 6px;
+      ">${o.toFixed(1)}mm</div>
+    `,iconSize:[40,36],iconAnchor:[20,18]});default:let s;return s=e.temperature??20,c.default.divIcon({className:"custom-weather-marker",html:`
+      <div style="
+        min-width: 36px; height: 36px; border-radius: 50%;
+        background: ${s<10?"#3B82F6":s<20?"#10B981":s<28?"#F59E0B":"#EF4444"}; border: 2px solid white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        display: flex; align-items: center; justify-content: center;
+        font-weight: bold; color: white; font-size: 13px; font-family: sans-serif;
+        padding: 0 6px;
+      ">${Math.round(s)}\xb0</div>
+    `,iconSize:[36,36],iconAnchor:[18,18]})}})(e),children:(0,n.jsx)(p,{children:(0,n.jsxs)("div",{className:"text-center min-w-[120px]",children:[(0,n.jsx)("p",{className:"font-bold text-slate-800",children:e.displayName}),e.region&&(0,n.jsx)("p",{className:"text-xs text-slate-500",children:e.region}),(0,n.jsxs)("div",{className:"mt-2 space-y-1 text-sm",children:[void 0!==e.temperature&&(0,n.jsxs)("p",{children:["🌡️ ",Math.round(e.temperature),"°C"]}),void 0!==e.windSpeed&&"wind"===l&&(0,n.jsxs)("p",{children:["💨 ",Math.round(e.windSpeed)," km/h"]}),void 0!==e.windDirection&&"wind"===l&&(0,n.jsxs)("p",{children:["🧭 ",Math.round(e.windDirection),"°"]}),void 0!==e.pressure&&"pressure"===l&&(0,n.jsxs)("p",{children:["📊 ",Math.round(e.pressure)," hPa"]}),void 0!==e.humidity&&(0,n.jsxs)("p",{children:["💧 Umidità: ",e.humidity,"%"]}),void 0!==e.precipitation&&"rain"===l&&(0,n.jsxs)("p",{children:["🌧️ Precipitazioni: ",e.precipitation," mm"]})]})]})})},`${e.name}-${l}`))]})})}],39181)},17399,e=>{e.n(e.i(39181))}]);

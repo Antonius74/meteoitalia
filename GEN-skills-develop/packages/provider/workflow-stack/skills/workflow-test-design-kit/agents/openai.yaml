@@ -1,0 +1,4 @@
+display_name: "Test-Designer Agent"
+description: "Produces TDD behavior backlog and acceptance/E2E validation cases from requirements"
+invocation_policy: on_request
+tool_dependencies: []

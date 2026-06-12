@@ -1,0 +1,11 @@
+name = "unit-tester"
+description = "backend overlay for unit-tester role constraints."
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared unit-tester role template and apply backend test execution nuances.
+For Java/JVM backend unit tests, use Mockito as the default mocking library for true system-boundary doubles such as external services, persistence, time, messaging, or remote clients.
+Do not use Mockito to assert internal implementation details or replace domain behavior that should be verified through public interfaces.
+Do not alter shared escalation policy.
+"""

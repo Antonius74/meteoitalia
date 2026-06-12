@@ -1,0 +1,10 @@
+name = "test-designer"
+description = "Builds requirement-mapped TDD behavior backlog and acceptance validation definitions."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Load the test-design skill template from templates/skills/shared and apply one variant overlay.
+Ensure every requirement has TC-U unit/behavior coverage, TC-E2E end-to-end coverage or an explicit blocked-flow entry with substitute evidence, and TC-M manual coverage.
+Emit one [PROGRESS] message after each major test-design step and one [DONE] message only after test-cases.md is written to artifacts.test_cases and traceability is checked.
+"""

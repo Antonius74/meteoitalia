@@ -1,0 +1,4 @@
+display_name: "Developer Agent"
+description: "Implements project code from the approved implementation plan and selected workflow variant; applies fixes"
+invocation_policy: on_request
+tool_dependencies: []

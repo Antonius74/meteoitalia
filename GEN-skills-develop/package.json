@@ -1,0 +1,56 @@
+{
+  "name": "@nexidigital/nd-gen-skills",
+  "version": "1.2.1",
+  "description": "Nexi Digital AI skills installer for Codex and Claude repositories.",
+  "type": "module",
+  "bin": {
+    "nd-gen-skills": "./dist/bin/nd-gen-skills.js"
+  },
+  "files": [
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "dist/**/*.js.map",
+    "dist-registry",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.scripts.json",
+    "build:codex-shareable": "tsx scripts/build-codex-shareable.ts --next-version",
+    "build:registry": "tsx scripts/build-registry.ts",
+    "pack": "npm pack --pack-destination dist --ignore-scripts",
+    "pack:dry-run": "npm run pack --dry-run",
+    "sync:superpowers-provider": "tsx scripts/sync-superpowers-provider.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare": "npm run build && npm run build:registry",
+    "release": "semantic-release",
+    "release:dry-run": "semantic-release --dry-run"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "tar": "^7.4.3",
+    "yaml": "^2.6.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^12.0.8",
+    "@semantic-release/npm": "^13.1.5",
+    "@semantic-release/release-notes-generator": "^14.1.1",
+    "@types/node": "^22.10.2",
+    "conventional-changelog-conventionalcommits": "^9.3.1",
+    "semantic-release": "^25.0.3",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.8"
+  },
+  "license": "UNLICENSED",
+  "publishConfig": {
+    "registry": "https://artifactory.nexicloud.it/artifactory/api/npm/libs-nexidigital-local"
+  }
+}

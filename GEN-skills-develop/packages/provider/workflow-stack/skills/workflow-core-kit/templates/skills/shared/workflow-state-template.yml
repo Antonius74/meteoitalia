@@ -1,0 +1,56 @@
+# workflow-state.yml lives inside the run-specific workflow directory:
+#   .workflows/<run>/workflow-state.yml
+# It is created by init_orchestration.py — never edit by hand.
+
+workflow:
+  started_at: "{{STARTED_AT}}"
+  branch: "{{BRANCH}}"
+  jira_issues: {{JIRA_ISSUES}}
+  # Leaf folder name for this run (e.g. PROJ-101-102_state-machine)
+  run: "{{RUN}}"
+  # Full path to the run-specific workflow directory
+  run_dir: "{{RUN_DIR}}"   # e.g. .workflows/PROJ-101-102_state-machine
+
+current_phase: 1-planning
+
+phases:
+  1-planning: pending
+  2-requirements-review: pending     # Gate 1
+  3a-architecture: pending
+  3b-test-design: pending
+  4-design-review: pending           # Gate 2
+  5-development: pending
+  6-code-review: pending             # Gate 3
+  7a-unit-testing: pending
+  7b-automation-test-writing: pending
+  8-pre-deploy-review: pending       # Gate 4
+  9-deploy: pending
+  10-automation-test-running: pending
+  11-result-gate: pending
+
+iterations:
+  unit_test_fixes: 0
+  automation_cycles: 0
+
+# All Markdown artefacts live in the run-specific workflow directory.
+# These paths are computed by init_orchestration.py and must be passed
+# to every subagent that reads or writes workflow artefacts.
+artifacts:
+  requirements: "{{ART_REQUIREMENTS}}"         # <run_dir>/requirements.md
+  implementation_plan: "{{ART_IMPLEMENTATION_PLAN}}"  # <run_dir>/implementation-plan.md
+  api_contract: "{{ART_API_CONTRACT}}"      # <run_dir>/api-contract.md
+  test_cases: "{{ART_TEST_CASES}}"           # <run_dir>/test-cases.md
+  automation_test_data: "{{ART_AUTOMATION_TEST_DATA}}" # <run_dir>/automation-test-data.md
+  automation_report: "{{ART_AUTOMATION_REPORT}}"    # <run_dir>/automation-test-report.md
+
+approvals:
+  gate_1_requirements: null   # "approved" | "rejected" | null
+  gate_2_design: null
+  gate_3_code: null
+  gate_4_pre_deploy: null
+
+human_feedback: []
+# - phase: 2-requirements-review
+#   timestamp: "2026-04-10T14:32:00"
+#   decision: rejected
+#   comment: "Clarify the validation rule for the date field"

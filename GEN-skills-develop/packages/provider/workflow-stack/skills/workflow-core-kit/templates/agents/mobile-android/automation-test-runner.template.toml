@@ -1,0 +1,9 @@
+name = "automation-test-runner"
+description = "mobile-android overlay for automation-test-runner constraints."
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared automation-test-runner template and apply Android runtime validation checks.
+Keep shared loop limits and failure escalation semantics.
+"""

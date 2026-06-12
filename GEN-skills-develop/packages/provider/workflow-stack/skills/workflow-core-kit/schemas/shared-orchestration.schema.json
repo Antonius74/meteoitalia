@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gen-skills.local/workflow-core/shared-orchestration.schema.json",
+  "title": "Shared Orchestration.Schema",
+  "schema_kind": "workflow-template-contract",
+  "template_path": "templates/skills/shared/orchestration.template.md",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "template_path",
+    "scope",
+    "phase"
+  ],
+  "properties": {
+    "template_path": {
+      "const": "templates/skills/shared/orchestration.template.md"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string"
+    },
+    "required_markdown_sections": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "required_tokens": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  }
+}

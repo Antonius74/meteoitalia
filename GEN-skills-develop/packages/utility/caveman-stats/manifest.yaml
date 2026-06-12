@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: caveman-stats
+version: 0.1.0
+description: Report caveman token-usage stats when the active toolchain exposes a compatible stats hook.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: caveman-stats
+  source: skill

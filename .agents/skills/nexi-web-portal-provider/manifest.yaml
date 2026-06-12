@@ -1,0 +1,22 @@
+name: nexi-web-portal-provider
+version: 1.0.0
+description: Provider per portali web Node.js/Next.js
+kind: provider
+capabilities:
+  - brainstorming
+  - writing-plans
+  - using-git-worktrees
+  - executing-plans
+  - subagent-driven-development
+  - test-driven-development
+  - systematic-debugging
+  - requesting-code-review
+  - receiving-code-review
+  - verification-before-completion
+  - finishing-a-development-branch
+requirements:
+  node: ">=20.0.0"
+  typescript: ">=5.7.0"
+install_path: .agents/skills/nexi-web-portal-provider
+files:
+  - SKILL.md

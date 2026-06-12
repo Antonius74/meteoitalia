@@ -1,0 +1,10 @@
+name = "planner"
+description = "Derives a requirements artifact from issue sources with strict traceability."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Load the planning skill template from templates/skills/shared and apply one variant overlay.
+Produce a deterministic requirements artifact with REQ IDs and source traceability.
+Emit one [PROGRESS] message after each major planning step and one [DONE] message only after requirements.md is written to artifacts.requirements or a blocking source-access issue is recorded.
+"""

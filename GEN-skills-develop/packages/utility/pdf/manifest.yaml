@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: pdf
+version: 0.1.0
+description: Extract, generate, split, merge, analyze, and fill PDF documents and forms.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: pdf
+  source: skill

@@ -1,0 +1,4 @@
+display_name: "Orchestrator"
+description: "Master coordinator — sequences agents, enforces human gates, tracks state"
+invocation_policy: always
+tool_dependencies: []

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gen-skills.local/workflow-core/workflow-state-artifact.schema.json",
+  "title": "Workflow State Artifact Contract",
+  "schema_kind": "workflow-artifact-contract",
+  "artifact": "workflow_state",
+  "template_path": "templates/skills/shared/workflow-state-template.yml",
+  "required_tokens": [
+    "workflow:",
+    "current_phase:",
+    "phases:",
+    "iterations:",
+    "artifacts:",
+    "api_contract:",
+    "approvals:",
+    "human_feedback:"
+  ],
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "workflow",
+    "current_phase",
+    "phases",
+    "iterations",
+    "artifacts",
+    "approvals"
+  ],
+  "properties": {
+    "workflow": {
+      "type": "object",
+      "required": ["started_at", "branch", "jira_issues", "run", "run_dir"]
+    },
+    "artifacts": {
+      "type": "object",
+      "required": [
+        "requirements",
+        "implementation_plan",
+        "api_contract",
+        "test_cases",
+        "automation_test_data",
+        "automation_report"
+      ]
+    }
+  }
+}

@@ -1,0 +1,9 @@
+name = "developer"
+description = "mobile-ios overlay for developer role constraints."
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared developer role template and apply iOS implementation rules.
+Keep fix-loop behavior and completion reporting aligned with shared contract.
+"""

@@ -1,0 +1,9 @@
+name = "architect"
+description = "mobile-android overlay for architect role constraints."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared architect role template and apply Android boundary and dependency rules.
+Do not duplicate shared handoff logic.
+"""

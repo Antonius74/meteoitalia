@@ -1,0 +1,8 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: contract
+name: documentation-core
+version: 0.1.0
+
+skill:
+  name: documentation-core
+  source: skill

@@ -1,0 +1,38 @@
+.idea/
+.repo/
+.DS_Store
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+.venv/
+venv/
+
+# npm dependency and cache directories
+node_modules/
+.npm/
+.pnpm-store/
+
+# npm/yarn/pnpm debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Generated npm package artifacts
+dist/*
+!dist/.gitignore
+*.tgz
+dist-registry/*
+!dist-registry/index.yaml
+!dist-registry/packages/
+!dist-registry/packages/*.tgz
+
+# Keep lockfiles versioned for reproducible package releases
+!package-lock.json
+!npm-shrinkwrap.json
+!pnpm-lock.yaml
+!yarn.lock
+
+.worktrees

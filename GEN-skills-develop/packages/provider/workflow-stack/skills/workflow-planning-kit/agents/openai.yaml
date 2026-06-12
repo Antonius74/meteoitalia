@@ -1,0 +1,7 @@
+display_name: "Planning Agent"
+description: "Reads Jira User Stories and produces requirements.md"
+invocation_policy: on_request
+tool_dependencies:
+  - name: atlassian-mcp
+    required: true
+    description: "Jira read access via Atlassian MCP server"

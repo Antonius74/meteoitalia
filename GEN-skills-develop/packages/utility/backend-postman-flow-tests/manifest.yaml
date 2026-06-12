@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: backend-postman-flow-tests
+version: 0.1.0
+description: Create backend Postman flow test environments and collections from repository testing documentation.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: backend-postman-flow-tests
+  source: skill

@@ -1,0 +1,9 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: documentation-ubiquitous-language
+version: 0.1.0
+description: Extract a DDD-style ubiquitous language glossary from conversation and repository evidence.
+
+skill:
+  name: documentation-ubiquitous-language
+  source: skill

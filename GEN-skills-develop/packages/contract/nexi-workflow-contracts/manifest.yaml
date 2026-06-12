@@ -1,0 +1,8 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: contract
+name: nexi-workflow-contracts
+version: 0.1.0
+
+skill:
+  name: nexi-workflow-contracts
+  source: skill

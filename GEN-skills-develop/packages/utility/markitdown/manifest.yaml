@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: markitdown
+version: 0.1.0
+description: Convert local documents to Markdown with Microsoft MarkItDown.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: markitdown
+  source: skill

@@ -1,0 +1,30 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: variant
+name: mobile-ios
+version: 0.1.0
+
+requiresProviderCapabilities:
+  - requirements-design
+  - planning
+  - execution
+  - tdd
+  - debugging
+  - verification
+  - code-review
+
+requiresContracts:
+  - nexi-workflow-contracts
+
+requiresUtilities:
+  - grill-me
+  - read-jira-issue
+  - figma-use
+
+runtime:
+  skillName: nexi-mobile-ios-runtime
+  source: runtime
+  references:
+    - nexi-workflow-contracts
+    - grill-me
+    - read-jira-issue
+    - figma-use

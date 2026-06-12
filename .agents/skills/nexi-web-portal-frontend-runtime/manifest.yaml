@@ -1,0 +1,15 @@
+name: nexi-web-portal-frontend-runtime
+version: 1.0.0
+description: Runtime variant per portali web Next.js/React
+kind: variant
+provider: nexi-web-portal-provider
+requires:
+  contracts:
+    - nexi-web-portal-contracts
+  utilities:
+    - grill-me
+    - verification-before-completion
+    - skill-scanner
+install_path: .agents/skills/nexi-web-portal-frontend-runtime
+files:
+  - SKILL.md

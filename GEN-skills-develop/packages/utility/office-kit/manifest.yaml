@@ -1,0 +1,15 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: office-kit
+version: 0.1.0
+description: Install office document skills for Word, PDF, PowerPoint, spreadsheet, and Markdown conversion work.
+requiresContracts: []
+requiresUtilities:
+  - docx
+  - pdf
+  - pptx
+  - xlsx
+  - markitdown
+skill:
+  name: office-kit
+  source: skill

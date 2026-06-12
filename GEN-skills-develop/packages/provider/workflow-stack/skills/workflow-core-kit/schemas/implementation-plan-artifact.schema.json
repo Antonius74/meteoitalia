@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gen-skills.local/workflow-core/implementation-plan-artifact.schema.json",
+  "title": "Implementation Plan Artifact Contract",
+  "schema_kind": "workflow-artifact-contract",
+  "artifact": "implementation_plan",
+  "template_path": "templates/skills/shared/implementation-plan-template.md",
+  "required_markdown_sections": [
+    "## Overview",
+    "## Architecture Decisions",
+    "## Implementation Steps",
+    "## Configuration Changes",
+    "## Dependency Changes",
+    "## Risks & Assumptions",
+    "## Traceability Matrix"
+  ],
+  "required_tokens": [
+    "Awaiting Gate 2 approval",
+    "**Gate 2 decision:**"
+  ],
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "implementation_steps",
+    "risks_assumptions",
+    "traceability_matrix"
+  ],
+  "properties": {
+    "implementation_steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "requirement",
+          "action",
+          "file",
+          "responsibility"
+        ]
+      },
+      "minItems": 1
+    },
+    "risks_assumptions": { "type": "array" },
+    "traceability_matrix": { "type": "array" }
+  }
+}

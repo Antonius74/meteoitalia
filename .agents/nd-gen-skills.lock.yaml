@@ -1,0 +1,80 @@
+# Lockfile
+
+Stato gestito delle skill installate nel repository.
+
+## Format
+
+```yaml
+version: "1.0"
+tool: "codex"
+provider: "nexi-web-portal-provider"
+variant: "web-portal-frontend"
+installed_at: "2026-06-12T10:00:00Z"
+
+packages:
+  provider:
+    name: "nexi-web-portal-provider"
+    version: "1.0.0"
+    path: ".agents/skills/nexi-web-portal-provider"
+    
+  variant:
+    name: "nexi-web-portal-frontend-runtime"
+    version: "1.0.0"
+    path: ".agents/skills/nexi-web-portal-frontend-runtime"
+    
+  contracts:
+    - name: "nexi-web-portal-contracts"
+      version: "1.0.0"
+      path: ".agents/skills/nexi-web-portal-contracts"
+      
+  utilities:
+    - name: "meteo-weather-kit"
+      version: "1.0.0"
+      path: ".agents/skills/meteo-weather-kit"
+      
+    - name: "meteo-map-kit"
+      version: "1.0.0"
+      path: ".agents/skills/meteo-map-kit"
+      
+    - name: "meteo-seo-kit"
+      version: "1.0.0"
+      path: ".agents/skills/meteo-seo-kit"
+      
+    - name: "grill-me"
+      version: "1.0.0"
+      path: ".agents/skills/grill-me"
+      
+    - name: "verification-before-completion"
+      version: "1.0.0"
+      path: ".agents/skills/verification-before-completion"
+      
+    - name: "skill-scanner"
+      version: "1.0.0"
+      path: ".agents/skills/skill-scanner"
+
+managed_files:
+  - path: "AGENTS.md"
+    hash: "sha256:..."
+    block_start: "<!-- BEGIN:nextjs-agent-rules -->"
+    block_end: "<!-- END:nextjs-agent-rules -->"
+    
+  - path: ".agents/skills/nexi-web-portal-provider/SKILL.md"
+    hash: "sha256:..."
+    
+  - path: ".agents/skills/nexi-web-portal-frontend-runtime/SKILL.md"
+    hash: "sha256:..."
+    
+  # ... altri managed files
+```
+
+## Validation
+
+Usare `validate --ci` per rilevare drift:
+```bash
+npx -y @nexidigital/nd-gen-skills validate --ci
+```
+
+## Related
+
+- [Provider](nexi-web-portal-provider/SKILL.md)
+- [AGENTS.md](../../AGENTS.md)

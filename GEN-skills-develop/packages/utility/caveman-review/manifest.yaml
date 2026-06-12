@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: caveman-review
+version: 0.1.0
+description: Produce terse actionable code review comments with location, problem, and fix.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: caveman-review
+  source: skill

@@ -1,0 +1,53 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: provider
+name: workflow-stack
+version: 0.1.0
+
+requiresUtilities:
+  - grill-me
+  - tdd
+
+capabilities:
+  requirements-design:
+    skill: workflow-planning-kit
+  planning:
+    skill: workflow-architecture-kit
+  execution:
+    skill: workflow-development-kit
+  tdd:
+    skill: workflow-development-kit
+  debugging:
+    skill: workflow-development-kit
+  verification:
+    skill: workflow-test-design-kit
+  code-review:
+    skill: workflow-orchestration-kit
+  finishing:
+    skill: workflow-orchestration-kit
+  orchestration:
+    skill: workflow-orchestration-kit
+  functional-quality:
+    skill: workflow-us-quality-assessment-kit
+
+skills:
+  - name: workflow-core-kit
+    role: support
+    source: skills/workflow-core-kit
+  - name: workflow-planning-kit
+    role: workflow
+    source: skills/workflow-planning-kit
+  - name: workflow-architecture-kit
+    role: workflow
+    source: skills/workflow-architecture-kit
+  - name: workflow-development-kit
+    role: workflow
+    source: skills/workflow-development-kit
+  - name: workflow-test-design-kit
+    role: workflow
+    source: skills/workflow-test-design-kit
+  - name: workflow-orchestration-kit
+    role: workflow
+    source: skills/workflow-orchestration-kit
+  - name: workflow-us-quality-assessment-kit
+    role: workflow
+    source: skills/workflow-us-quality-assessment-kit

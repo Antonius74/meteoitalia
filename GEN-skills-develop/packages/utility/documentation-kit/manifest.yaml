@@ -1,0 +1,17 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: documentation-kit
+version: 0.1.0
+description: Create and maintain concise repository documentation from shared documentation templates.
+
+requiresContracts:
+  - documentation-core
+requiresUtilities:
+  - documentation-design-kit
+  - documentation-ubiquitous-language
+  - documentation-quality-assessment
+  - agents-md-refactor
+
+skill:
+  name: documentation-kit
+  source: skill

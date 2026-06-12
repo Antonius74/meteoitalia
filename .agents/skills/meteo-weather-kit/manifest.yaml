@@ -1,0 +1,8 @@
+name: meteo-weather-kit
+version: 1.0.0
+description: Utility per integrazione dati meteorologici
+kind: utility
+provider: nexi-web-portal-provider
+install_path: .agents/skills/meteo-weather-kit
+files:
+  - SKILL.md

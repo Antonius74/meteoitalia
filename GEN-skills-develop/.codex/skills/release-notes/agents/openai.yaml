@@ -1,0 +1,4 @@
+interface:
+  display_name: "Release Notes"
+  short_description: "Create version-named GEN-skills release notes"
+  default_prompt: "Use $release-notes to update a self-contained, reader-friendly, version-named release note for the latest GEN-skills version."

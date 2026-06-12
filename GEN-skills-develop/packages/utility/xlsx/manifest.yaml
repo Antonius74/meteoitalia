@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: xlsx
+version: 0.1.0
+description: Create, edit, analyze, recalculate, and validate spreadsheet workbooks.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: xlsx
+  source: skill

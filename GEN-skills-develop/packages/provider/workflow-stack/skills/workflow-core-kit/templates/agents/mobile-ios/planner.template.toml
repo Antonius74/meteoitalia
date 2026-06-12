@@ -1,0 +1,9 @@
+name = "planner"
+description = "mobile-ios overlay for planner role constraints."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared planner role template and apply iOS-specific requirement focus.
+Keep shared traceability rules unchanged.
+"""

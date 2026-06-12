@@ -1,0 +1,124 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+defaults:
+  provider: superpowers
+  contracts:
+    - nexi-workflow-contracts
+packages:
+  provider/superpowers:
+    latest: 0.1.0
+    artifact: packages/provider-superpowers-0.1.0.tgz
+  provider/workflow-stack:
+    latest: 0.1.0
+    artifact: packages/provider-workflow-stack-0.1.0.tgz
+  contract/nexi-workflow-contracts:
+    latest: 0.1.0
+    artifact: packages/contract-nexi-workflow-contracts-0.1.0.tgz
+  contract/documentation-core:
+    latest: 0.1.0
+    artifact: packages/contract-documentation-core-0.1.0.tgz
+  variant/frontend-react:
+    latest: 0.1.0
+    artifact: packages/variant-frontend-react-0.1.0.tgz
+  variant/backend-java:
+    latest: 0.1.0
+    artifact: packages/variant-backend-java-0.1.0.tgz
+  variant/mobile-ios:
+    latest: 0.1.0
+    artifact: packages/variant-mobile-ios-0.1.0.tgz
+  variant/mobile-android:
+    latest: 0.1.0
+    artifact: packages/variant-mobile-android-0.1.0.tgz
+  utility/frontend-react-e2e-test-implementation:
+    latest: 0.1.0
+    artifact: packages/utility-frontend-react-e2e-test-implementation-0.1.0.tgz
+  utility/backend-service-implementation-kit:
+    latest: 0.1.0
+    artifact: packages/utility-backend-service-implementation-kit-0.1.0.tgz
+  utility/backend-controller-implementation-kit:
+    latest: 0.1.0
+    artifact: packages/utility-backend-controller-implementation-kit-0.1.0.tgz
+  utility/backend-deployment-management:
+    latest: 0.1.0
+    artifact: packages/utility-backend-deployment-management-0.1.0.tgz
+  utility/backend-jenkins-build:
+    latest: 0.1.0
+    artifact: packages/utility-backend-jenkins-build-0.1.0.tgz
+  utility/backend-jenkins-build-script:
+    latest: 0.1.0
+    artifact: packages/utility-backend-jenkins-build-script-0.1.0.tgz
+  utility/backend-postman-flow-tests:
+    latest: 0.1.0
+    artifact: packages/utility-backend-postman-flow-tests-0.1.0.tgz
+  utility/backend-run-collection:
+    latest: 0.1.0
+    artifact: packages/utility-backend-run-collection-0.1.0.tgz
+  utility/mobile-android-layout-inspector:
+    latest: 0.1.0
+    artifact: packages/utility-mobile-android-layout-inspector-0.1.0.tgz
+  utility/docx:
+    latest: 0.1.0
+    artifact: packages/utility-docx-0.1.0.tgz
+  utility/pdf:
+    latest: 0.1.0
+    artifact: packages/utility-pdf-0.1.0.tgz
+  utility/pptx:
+    latest: 0.1.0
+    artifact: packages/utility-pptx-0.1.0.tgz
+  utility/xlsx:
+    latest: 0.1.0
+    artifact: packages/utility-xlsx-0.1.0.tgz
+  utility/office-kit:
+    latest: 0.1.0
+    artifact: packages/utility-office-kit-0.1.0.tgz
+  utility/read-jira-issue:
+    latest: 0.1.0
+    artifact: packages/utility-read-jira-issue-0.1.0.tgz
+    userInstallable: false
+  utility/documentation-kit:
+    latest: 0.1.0
+    artifact: packages/utility-documentation-kit-0.1.0.tgz
+  utility/documentation-design-kit:
+    latest: 0.1.0
+    artifact: packages/utility-documentation-design-kit-0.1.0.tgz
+  utility/documentation-ubiquitous-language:
+    latest: 0.1.0
+    artifact: packages/utility-documentation-ubiquitous-language-0.1.0.tgz
+  utility/documentation-quality-assessment:
+    latest: 0.1.0
+    artifact: packages/utility-documentation-quality-assessment-0.1.0.tgz
+  utility/agents-md-refactor:
+    latest: 0.1.0
+    artifact: packages/utility-agents-md-refactor-0.1.0.tgz
+  utility/grill-me:
+    latest: 0.1.0
+    artifact: packages/utility-grill-me-0.1.0.tgz
+  utility/tdd:
+    latest: 0.1.0
+    artifact: packages/utility-tdd-0.1.0.tgz
+  utility/figma-use:
+    latest: 0.1.0
+    artifact: packages/utility-figma-use-0.1.0.tgz
+  utility/markitdown:
+    latest: 0.1.0
+    artifact: packages/utility-markitdown-0.1.0.tgz
+  utility/cavecrew:
+    latest: 0.1.0
+    artifact: packages/utility-cavecrew-0.1.0.tgz
+  utility/caveman:
+    latest: 0.1.0
+    artifact: packages/utility-caveman-0.1.0.tgz
+  utility/caveman-commit:
+    latest: 0.1.0
+    artifact: packages/utility-caveman-commit-0.1.0.tgz
+  utility/caveman-compress:
+    latest: 0.1.0
+    artifact: packages/utility-caveman-compress-0.1.0.tgz
+  utility/caveman-help:
+    latest: 0.1.0
+    artifact: packages/utility-caveman-help-0.1.0.tgz
+  utility/caveman-review:
+    latest: 0.1.0
+    artifact: packages/utility-caveman-review-0.1.0.tgz
+  utility/caveman-stats:
+    latest: 0.1.0
+    artifact: packages/utility-caveman-stats-0.1.0.tgz

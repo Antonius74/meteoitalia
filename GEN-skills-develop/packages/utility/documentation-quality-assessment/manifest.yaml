@@ -1,0 +1,11 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: documentation-quality-assessment
+version: 0.1.0
+description: Assess repository documentation and AGENTS.md quality against enterprise standards.
+requiresContracts:
+  - documentation-core
+requiresUtilities: []
+skill:
+  name: documentation-quality-assessment
+  source: skill

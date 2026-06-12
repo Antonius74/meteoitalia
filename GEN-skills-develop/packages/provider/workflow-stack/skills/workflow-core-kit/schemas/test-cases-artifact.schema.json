@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gen-skills.local/workflow-core/test-cases-artifact.schema.json",
+  "title": "Test Cases Artifact Contract",
+  "schema_kind": "workflow-artifact-contract",
+  "artifact": "test_cases",
+  "template_path": "templates/skills/shared/test-cases-template.md",
+  "required_markdown_sections": [
+    "## Suite Execution Strategy",
+    "## Unit / Behavior Test Backlog",
+    "## End-to-End Test Backlog",
+    "## Manual Test Backlog",
+    "## Development-Discovered Test Cases",
+    "## Traceability Matrix"
+  ],
+  "required_tokens": [
+    "TC-U-",
+    "TC-E2E-",
+    "TC-M-",
+    "fully_automated",
+    "manual",
+    "blocked_by_dependency"
+  ],
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "suite_execution_strategy",
+    "unit_behavior_cases",
+    "e2e_flows",
+    "manual_cases",
+    "traceability_matrix"
+  ],
+  "properties": {
+    "suite_execution_strategy": {
+      "enum": ["fully_automated", "manual_only", "mixed", "blocked"]
+    },
+    "unit_behavior_cases": { "type": "array", "minItems": 1 },
+    "e2e_flows": { "type": "array", "minItems": 1 },
+    "manual_cases": { "type": "array", "minItems": 1 },
+    "traceability_matrix": { "type": "array" }
+  }
+}

@@ -1,0 +1,9 @@
+name = "unit-tester"
+description = "mobile-ios overlay for unit-tester role constraints."
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared unit-tester role template and apply iOS test execution nuances.
+Do not alter shared escalation policy.
+"""

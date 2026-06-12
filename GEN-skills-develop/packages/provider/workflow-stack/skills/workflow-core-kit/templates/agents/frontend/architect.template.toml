@@ -1,0 +1,9 @@
+name = "architect"
+description = "frontend overlay for architect role constraints."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared architect role template and apply frontend boundary and dependency rules.
+Do not duplicate shared handoff logic.
+"""

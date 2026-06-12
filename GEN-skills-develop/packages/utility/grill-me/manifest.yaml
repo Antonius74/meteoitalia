@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: grill-me
+version: 0.1.0
+description: Interview the user relentlessly about plans or designs until shared understanding is reached.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: grill-me
+  source: skill

@@ -1,0 +1,32 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: variant
+name: frontend-react
+version: 0.1.0
+
+requiresProviderCapabilities:
+  - requirements-design
+  - planning
+  - execution
+  - tdd
+  - debugging
+  - verification
+  - code-review
+
+requiresContracts:
+  - nexi-workflow-contracts
+
+requiresUtilities:
+  - grill-me
+  - read-jira-issue
+  - figma-use
+  - frontend-react-e2e-test-implementation
+
+runtime:
+  skillName: nexi-frontend-react-runtime
+  source: runtime
+  references:
+    - nexi-workflow-contracts
+    - grill-me
+    - read-jira-issue
+    - figma-use
+    - frontend-react-e2e-test-implementation

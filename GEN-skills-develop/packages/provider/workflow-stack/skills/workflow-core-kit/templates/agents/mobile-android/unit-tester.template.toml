@@ -1,0 +1,9 @@
+name = "unit-tester"
+description = "mobile-android overlay for unit-tester role constraints."
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared unit-tester role template and apply Android test execution nuances.
+Do not alter shared escalation policy.
+"""

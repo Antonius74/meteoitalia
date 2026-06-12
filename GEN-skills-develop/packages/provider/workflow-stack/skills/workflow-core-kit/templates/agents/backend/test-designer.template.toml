@@ -1,0 +1,9 @@
+name = "test-designer"
+description = "backend overlay for test-designer role constraints."
+model = "gpt-5.4"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared test-designer role template and apply backend testing emphasis.
+Preserve REQ-to-test traceability.
+"""

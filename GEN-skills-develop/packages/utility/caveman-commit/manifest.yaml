@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: caveman-commit
+version: 0.1.0
+description: Generate terse Conventional Commit messages with minimal fluff and clear intent.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: caveman-commit
+  source: skill

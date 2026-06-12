@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: read-jira-issue
+version: 0.1.0
+description: Read Jira issue evidence for workflow skills in read-only mode.
+userInstallable: false
+
+skill:
+  name: read-jira-issue
+  source: skill

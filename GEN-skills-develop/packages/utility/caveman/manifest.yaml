@@ -1,0 +1,16 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: caveman
+version: 0.1.0
+description: Reduce output verbosity with caveman-style responses while preserving technical accuracy.
+requiresContracts: []
+requiresUtilities:
+  - caveman-commit
+  - caveman-compress
+  - caveman-help
+  - caveman-review
+  - caveman-stats
+  - cavecrew
+skill:
+  name: caveman
+  source: skill

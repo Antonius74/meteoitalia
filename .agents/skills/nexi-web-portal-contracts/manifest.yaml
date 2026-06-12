@@ -1,0 +1,9 @@
+name: nexi-web-portal-contracts
+version: 1.0.0
+description: Contratti condivisi per portali web Nexi
+kind: contract
+install_path: .agents/skills/nexi-web-portal-contracts
+files:
+  - SKILL.md
+  - shared-patterns.md
+  - api-contracts.md

@@ -1,0 +1,8 @@
+name: meteo-seo-kit
+version: 1.0.0
+description: Utility per ottimizzazione SEO del portale meteo
+kind: utility
+provider: nexi-web-portal-provider
+install_path: .agents/skills/meteo-seo-kit
+files:
+  - SKILL.md

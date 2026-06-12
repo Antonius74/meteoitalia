@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: caveman-help
+version: 0.1.0
+description: Show a one-shot quick reference for caveman modes and related caveman utility skills.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: caveman-help
+  source: skill

@@ -1,0 +1,9 @@
+name = "automation-test-writer"
+description = "mobile-android overlay for automation-test-writer constraints."
+model = "gpt-5.3-codex"
+model_reasoning_effort = "high"
+
+developer_instructions = """
+Start from shared automation-test-writer template and apply Android automation scope.
+Keep test data and execution-mode reporting requirements.
+"""

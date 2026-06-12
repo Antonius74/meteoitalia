@@ -1,0 +1,10 @@
+apiVersion: nd-gen-skills.nexidigital.com/v1
+kind: utility
+name: backend-run-collection
+version: 0.1.0
+description: Run backend Postman collection tests with the Postman CLI and report structured API test results.
+requiresContracts: []
+requiresUtilities: []
+skill:
+  name: backend-run-collection
+  source: skill

@@ -1,0 +1,8 @@
+name: meteo-map-kit
+version: 1.0.0
+description: Utility per integrazione mappe interattive
+kind: utility
+provider: nexi-web-portal-provider
+install_path: .agents/skills/meteo-map-kit
+files:
+  - SKILL.md
